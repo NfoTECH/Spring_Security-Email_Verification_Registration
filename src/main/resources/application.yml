@@ -1,0 +1,36 @@
+server:
+  error:
+    include-message: always
+    include-binding-errors: always
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/registrationandlogin
+    username: fortunate
+    password: password
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+
+  mail:
+    host: localhost
+    port: 1025
+    username: hello
+    password: world
+    properties:
+      mail:
+        smtp:
+          ssl:
+            enable: false
+            trust: "*"
+          auth: true
+          starttls:
+            enable: true
+          connection-timeout: 5000
+          timeout: 3000
+          write timeout: 5000
